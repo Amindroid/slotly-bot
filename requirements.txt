@@ -1,0 +1,12 @@
+# Runtime
+# python-telegram-bot v22 line; the [job-queue] extra installs APScheduler,
+# which Stage 2 uses for the reminder check. Pip picks a mutually compatible
+# APScheduler/httpx automatically. (Exact versions NOT verified by the author -
+# see README "Verification status".)
+python-telegram-bot[job-queue]>=22.0,<23.0
+python-dotenv>=1.0,<2.0
+# Windows has no system timezone database; zoneinfo needs this package there.
+tzdata>=2024.1
+
+# Tests
+pytest>=8.0
